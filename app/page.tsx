@@ -5,10 +5,22 @@ import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import { siteData } from './data';
 
-// Yumuşak belirme animasyon ayarları (TypeScript Uyumlu Versiyon)
+// Temel yukarı kayarak belirme animasyonu
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
+
+// İletişim açıklama metni için özel gecikmeli animasyon (Vercel/TypeScript hatasını çözen kısım)
+const fadeInUpWithDelay: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut", delay: 0.2 } }
+};
+
+// İletişim ikonu/adresi için özel gecikmeli animasyon
+const fadeInUpWithMoreDelay: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut", delay: 0.4 } }
 };
 
 const staggerContainer: Variants = {
@@ -119,11 +131,12 @@ export default function Home() {
             viewport={{ once: true, amount: 0.5 }}
             variants={fadeInUp}
             className="text-3xl md:text-5xl font-extrabold mb-5 tracking-tighter">Bizimle İletişime Geçin</motion.h2>
+          
           <motion.p 
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5, delay: 0.2 }}
-            variants={fadeInUp}
+            viewport={{ once: true, amount: 0.5 }}
+            variants={fadeInUpWithDelay}
             className="text-slate-400 mb-16 text-lg max-w-xl mx-auto leading-relaxed">
             Kayseri ve çevre illerdeki projeleriniz için ücretsiz keşif ve fiyat teklifi almak üzere bizi 7/24 arayabilirsiniz.
           </motion.p>
@@ -152,8 +165,8 @@ export default function Home() {
           <motion.div 
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5, delay: 0.4 }}
-            variants={fadeInUp}
+            viewport={{ once: true, amount: 0.5 }}
+            variants={fadeInUpWithMoreDelay}
             className="mt-16 inline-flex items-center gap-3 bg-slate-800/50 border border-slate-800 px-6 py-3 rounded-full text-slate-300">
             <svg className="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
