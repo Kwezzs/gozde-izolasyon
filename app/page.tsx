@@ -207,7 +207,7 @@ export default function Home() {
           </svg>
           <span>by</span>
           <a 
-            href="#" /* BURAYA PORTFOLYO VEYA GITHUB LINKINI YAPIŞTIRABİLİRSİN */
+            href="https://www.linkedin.com/in/halil-boyraz-39b207334/" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-slate-400 hover:text-amber-500 font-medium transition-colors"
