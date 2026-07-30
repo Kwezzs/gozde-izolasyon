@@ -5,19 +5,17 @@ import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import { siteData } from './data';
 
-// Temel yukarı kayarak belirme animasyonu
+// Animasyon Varyantları
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-// İletişim açıklama metni için özel gecikmeli animasyon (Vercel/TypeScript hatasını çözen kısım)
 const fadeInUpWithDelay: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut", delay: 0.2 } }
 };
 
-// İletişim ikonu/adresi için özel gecikmeli animasyon
 const fadeInUpWithMoreDelay: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut", delay: 0.4 } }
@@ -31,7 +29,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800 font-sans selection:bg-amber-500 selection:text-slate-900 overflow-x-hidden">
       
-      {/* HEADER / HERO SECTION */}
+      {/* HEADER / HERO SECTION - SEO Optimize Edilmiş H1 */}
       <header className="bg-slate-900 text-white py-32 px-4 text-center relative overflow-hidden">
         <motion.div 
           initial={{ opacity: 0 }}
@@ -59,13 +57,13 @@ export default function Home() {
             {siteData.company.name}
           </motion.h1>
           
-          <motion.p 
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xl md:text-2xl text-slate-300 font-medium mb-12 max-w-2xl leading-relaxed">
-            {siteData.company.tagline}
-          </motion.p>
+            Kayseri Çatı ve Su Yalıtım Çözümleri
+          </motion.h2>
           
           <motion.a 
             href="#iletisim" 
@@ -75,21 +73,41 @@ export default function Home() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-lg py-4 px-12 rounded-2xl shadow-lg shadow-amber-500/20 transition-colors duration-300 transform">
-            Hemen Ücretsiz Keşif İsteyin
+            Ücretsiz Keşif İsteyin
           </motion.a>
         </div>
       </header>
 
+      {/* SEO METİN ALANI - Yeni Eklenen Bölüm */}
+      <section className="bg-white py-16 px-4">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+          className="max-w-4xl mx-auto text-center space-y-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-800">
+            Kayseri'de Güvenilir İzolasyon Çözümleri
+          </h2>
+          <p className="text-slate-600 leading-relaxed text-lg">
+            Gözde İzolasyon olarak Kayseri ve çevre illerde bina, müstakil ev, dükkan ve sanayi yapılarının su yalıtımı ile çatı izolasyonu ihtiyaçlarına profesyonel çözümler üretiyoruz. Uzman ekibimizle sızıntı kaynağını yerinde tespit ediyor, birinci sınıf malzemelerle kalıcı uygulamalar gerçekleştiriyoruz.
+          </p>
+        </motion.div>
+      </section>
+
       {/* HİZMETLERİMİZ */}
-      <section id="hizmetler" className="py-24 px-4 max-w-7xl mx-auto">
+      <section id="hizmetler" className="py-24 px-4 bg-gray-50 max-w-7xl mx-auto">
         <motion.div 
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
           className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tighter">Uzmanlık Alanlarımız</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tighter">Yalıtım Hizmetlerimiz</h2>
           <div className="w-24 h-2 bg-amber-500 mx-auto rounded-full"></div>
+          <p className="text-slate-600 mt-6 text-lg max-w-2xl mx-auto">
+            Yapılarınızın ömrünü uzatan, nem ve su sızıntılarına karşı kalıcı çözümler sunan uzmanlık alanlarımız.
+          </p>
         </motion.div>
         
         <motion.div 
@@ -130,7 +148,7 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
             variants={fadeInUp}
-            className="text-3xl md:text-5xl font-extrabold mb-5 tracking-tighter">Bizimle İletişime Geçin</motion.h2>
+            className="text-3xl md:text-5xl font-extrabold mb-5 tracking-tighter">İletişime Geçin</motion.h2>
           
           <motion.p 
             initial="hidden"
@@ -138,7 +156,7 @@ export default function Home() {
             viewport={{ once: true, amount: 0.5 }}
             variants={fadeInUpWithDelay}
             className="text-slate-400 mb-16 text-lg max-w-xl mx-auto leading-relaxed">
-            Kayseri ve çevre illerdeki projeleriniz için ücretsiz keşif ve fiyat teklifi almak üzere bizi 7/24 arayabilirsiniz.
+            Kayseri içi çatı tamiri ve temel yalıtımı projelerinizde yerinde inceleme yaparak ücretsiz fiyat teklifi sunuyoruz.
           </motion.p>
           
           <motion.div 
@@ -180,7 +198,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="bg-slate-950 text-slate-600 py-10 text-center text-sm border-t border-slate-900/50">
         <p>&copy; {new Date().getFullYear()} {siteData.company.name}. Tüm hakları saklıdır.</p>
-        <p className="mt-2 text-xs">Kayseri İzolasyon ve Çatı Çözümleri</p>
+        <p className="mt-2 text-xs">Kayseri İzolasyon, Çatı ve Yalıtım Çözümleri</p>
       </footer>
     </div>
   );
