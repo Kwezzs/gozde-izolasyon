@@ -203,3 +203,25 @@ export default function Home() {
     </div>
   );
 }
+{/* FOOTER */}
+<footer className="bg-slate-950 text-slate-600 py-10 text-center text-sm border-t border-slate-900/50">
+<p>&copy; {new Date().getFullYear()} {siteData.company.name}. Tüm hakları saklıdır.</p>
+<p className="mt-2 text-xs">Kayseri İzolasyon, Çatı ve Yalıtım Çözümleri</p>
+
+{/* GELİŞTİRİCİ İMZASI */}
+<div className="mt-8 pt-4 border-t border-slate-800/50 flex justify-center items-center gap-1 text-xs text-slate-500">
+  <span>Developed with</span>
+  <svg className="w-3 h-3 text-red-500 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+    <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+  </svg>
+  <span>by</span>
+  <a 
+    href="https://senin-portfolyo-siten.com" /* Kendi sitenin veya LinkedIn adresinin linkini buraya yaz */
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="text-slate-400 hover:text-amber-500 font-medium transition-colors"
+  >
+    Halil Boyraz
+  </a>
+</div>
+</footer>
