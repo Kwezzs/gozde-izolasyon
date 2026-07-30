@@ -1,4 +1,3 @@
-// app/page.tsx
 "use client";
 
 import React from 'react';
@@ -29,7 +28,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800 font-sans selection:bg-amber-500 selection:text-slate-900 overflow-x-hidden">
       
-      {/* HEADER / HERO SECTION - SEO Optimize Edilmiş H1 */}
+      {/* HEADER / HERO SECTION */}
       <header className="bg-slate-900 text-white py-32 px-4 text-center relative overflow-hidden">
         <motion.div 
           initial={{ opacity: 0 }}
@@ -78,7 +77,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* SEO METİN ALANI - Yeni Eklenen Bölüm */}
+      {/* SEO METİN ALANI */}
       <section className="bg-white py-16 px-4">
         <motion.div 
           initial="hidden"
@@ -87,7 +86,7 @@ export default function Home() {
           variants={fadeInUp}
           className="max-w-4xl mx-auto text-center space-y-6">
           <h2 className="text-2xl md:text-3xl font-bold text-slate-800">
-            Kayseri'de Güvenilir İzolasyon Çözümleri
+            Kayseri&apos;de Güvenilir İzolasyon Çözümleri
           </h2>
           <p className="text-slate-600 leading-relaxed text-lg">
             Gözde İzolasyon olarak Kayseri ve çevre illerde bina, müstakil ev, dükkan ve sanayi yapılarının su yalıtımı ile çatı izolasyonu ihtiyaçlarına profesyonel çözümler üretiyoruz. Uzman ekibimizle sızıntı kaynağını yerinde tespit ediyor, birinci sınıf malzemelerle kalıcı uygulamalar gerçekleştiriyoruz.
@@ -199,29 +198,24 @@ export default function Home() {
       <footer className="bg-slate-950 text-slate-600 py-10 text-center text-sm border-t border-slate-900/50">
         <p>&copy; {new Date().getFullYear()} {siteData.company.name}. Tüm hakları saklıdır.</p>
         <p className="mt-2 text-xs">Kayseri İzolasyon, Çatı ve Yalıtım Çözümleri</p>
+        
+        {/* GELİŞTİRİCİ İMZASI */}
+        <div className="mt-8 pt-4 border-t border-slate-800/50 flex justify-center items-center gap-1 text-xs text-slate-500">
+          <span>Developed with</span>
+          <svg className="w-3 h-3 text-red-500 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+          </svg>
+          <span>by</span>
+          <a 
+            href="#" /* BURAYA PORTFOLYO VEYA GITHUB LINKINI YAPIŞTIRABİLİRSİN */
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-slate-400 hover:text-amber-500 font-medium transition-colors"
+          >
+            Halil Boyraz
+          </a>
+        </div>
       </footer>
     </div>
   );
 }
-{/* FOOTER */}
-<footer className="bg-slate-950 text-slate-600 py-10 text-center text-sm border-t border-slate-900/50">
-<p>&copy; {new Date().getFullYear()} {siteData.company.name}. Tüm hakları saklıdır.</p>
-<p className="mt-2 text-xs">Kayseri İzolasyon, Çatı ve Yalıtım Çözümleri</p>
-
-{/* GELİŞTİRİCİ İMZASI */}
-<div className="mt-8 pt-4 border-t border-slate-800/50 flex justify-center items-center gap-1 text-xs text-slate-500">
-  <span>Developed with</span>
-  <svg className="w-3 h-3 text-red-500 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-    <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
-  </svg>
-  <span>by</span>
-  <a 
-    href="https://senin-portfolyo-siten.com" /* Kendi sitenin veya LinkedIn adresinin linkini buraya yaz */
-    target="_blank" 
-    rel="noopener noreferrer" 
-    className="text-slate-400 hover:text-amber-500 font-medium transition-colors"
-  >
-    Halil Boyraz
-  </a>
-</div>
-</footer>
