@@ -53,7 +53,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl md:text-7xl font-black tracking-tighter mb-5 uppercase text-white drop-shadow-sm">
+            className="text-5xl md:text-7xl font-black tracking-tighter mb-5 text-white drop-shadow-sm">
             {siteData.company.name}
           </motion.h1>
           
