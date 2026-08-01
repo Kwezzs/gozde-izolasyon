@@ -30,11 +30,11 @@ export const siteData: SiteData = {
     location: "Kayseri"
   },
   services: [
-    { id: 1, title: "Su Yalıtımı", description: "Binalarınızı neme ve suya karşı kesin olarak koruyoruz.", image: "/su_yalıtım.jpg" },
-    { id: 2, title: "Çatı İzolasyonu", description: "Çatılarınız için zorlu hava şartlarına dayanıklı çözümler.", image: "/çatı_izolasyon.jpg" },
-    { id: 3, title: "Temel Yalıtımı", description: "Bina temellerini nemden ve korozyondan koruyan sistemler.", image: "/yer_izolasyon.jpg" },
-    { id: 4, title: "Perde Beton Yalıtımı", description: "Toprak altı duvarlarda su sızdırmazlığını sağlayan uygulamalar.", image: "/perde-beton.jpg" },
-    { id: 5, title: "Teras Yalıtımı", description: "Açık teraslarınızda su sızıntılarını ve ısı kayıplarını önler.", image: "/teras-yalıtım.jpg" },
+    { id: 1, title: "Arduaz Çatı", description: "Çatılarınızı arduaz kaplamalarımızla zorlu hava koşullarına karşı dayanıklı ve estetik bir zırhla koruma altına alıyoruz.", image: "/Ardua_çatı.jpg" },
+    { id: 2, title: "Membran Çatı", description: "Su sızıntısı riskini tamamen ortadan kaldıran membran uygulamalarımızla çatılarınıza kusursuz bir su yalıtımı sağlıyoruz.", image: "/Membran_çatı.jpg" },
+    { id: 3, title: "Perde Membran", description: "Toprak altında kalan perde duvarlarınızı yeraltı sularına ve rutubete karşı membran yalıtımıyla kesin olarak güvenceye alıyoruz.", image: "/Perde_membran.jpg" },
+    { id: 4, title: "Shingle Çatı", description: "Hafif, şık ve uzun ömürlü shingle kaplamalarımızla çatılarınıza hem modern bir görünüm hem de güçlü bir koruma kazandırıyoruz.", image: "/Shingle_çatı.jpg" },
+    { id: 5, title: "Temel Bohçalama", description: "Binanızın temelini yeraltı sularından korumak için bohçalama yöntemiyle tamamen sarıyor, yapınızın taşıyıcı sistemini güvenceye alıyoruz.", image: "/Temel_bohçalama.jpg" },
     { id: 6, title: "Çatı Tamirat & Tadilat", description: "Mevcut çatıların onarımı, bakımı ve yenilenmesi işlemleri.", image: "/çatı_tamirat.jpg" }
   ],
   contacts: [
