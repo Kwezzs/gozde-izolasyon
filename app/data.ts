@@ -30,7 +30,7 @@ export const siteData: SiteData = {
     location: "Kayseri"
   },
   services: [
-    { id: 1, title: "Arduaz Çatı", description: "Çatılarınızı arduaz kaplamalarımızla zorlu hava koşullarına karşı dayanıklı ve estetik bir zırhla koruma altına alıyoruz.", image: "/Arduaz_çatı.jpg" },
+    { id: 1, title: "Arduaz Çatı", description: "Çatılarınızı arduaz kaplamalarımızla zorlu hava koşullarına karşı dayanıklı ve estetik bir zırhla koruma altına alıyoruz.", image: "/Arduaz.jpg" },
     { id: 2, title: "Membran Çatı", description: "Su sızıntısı riskini tamamen ortadan kaldıran membran uygulamalarımızla çatılarınıza kusursuz bir su yalıtımı sağlıyoruz.", image: "/Membran_çatı.jpg" },
     { id: 3, title: "Perde Membran", description: "Toprak altında kalan perde duvarlarınızı yeraltı sularına ve rutubete karşı membran yalıtımıyla kesin olarak güvenceye alıyoruz.", image: "/Perde_membran.jpg" },
     { id: 4, title: "Shingle Çatı", description: "Hafif, şık ve uzun ömürlü shingle kaplamalarımızla çatılarınıza hem modern bir görünüm hem de güçlü bir koruma kazandırıyoruz.", image: "/Shingle_çatı.jpg" },
